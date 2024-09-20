@@ -223,9 +223,6 @@ jobs:
           ping -c 5 -w 5 www.uol.com.br > /dev/null 2>&1 || true
         #
       - name: Network 02
-        uses: ./.github/actions/test
-        #
-      - name: Network 03
         run: |
           curl -s --connect-timeout 5 -m 5 -o /dev/null https://www.pinterest.com || true
           curl -s --connect-timeout 5 -m 5 -o /dev/null https://www.etsy.com || true
@@ -233,17 +230,14 @@ jobs:
           curl -s --connect-timeout 5 -m 5 -o /dev/null https://www.snapchat.com || true
           curl -s --connect-timeout 5 -m 5 -o /dev/null https://www.whatsapp.com || true
         #
-      - name: Network 04
-        uses: rafaeldtinoco/list-github-env@v0.4
-        #
-      - name: Network 05
+      - name: Network 03
         run: |
           ping -c 5 -w 5 www.google.com > /dev/null 2>&1 || true
           ping -c 5 -w 5 www.google.com > /dev/null 2>&1 || true
           ping -c 5 -w 5 8.8.4.4 > /dev/null 2>&1 || true
           ping -c 5 -w 5 8.8.8.8 > /dev/null 2>&1 || true
         #
-      - name: Network 06
+      - name: Network 04
         run: |
           ping -c 5 -w 5 1.1.1.1 > /dev/null 2>&1 || true
           curl -s --connect-timeout 5 -m 5 -o /dev/null https://www.etsy.com || true
